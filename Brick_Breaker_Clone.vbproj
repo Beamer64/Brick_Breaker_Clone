@@ -103,7 +103,6 @@
     <Content Include="js\collisions.js" />
     <Content Include="js\game.js" />
     <Content Include="js\labels.js" />
-    <Content Include="js\numberToWords.min.js" />
     <Content Include="js\paddle.js" />
     <Content Include="js\phaser.js" />
     <Content Include="Web.config" />
