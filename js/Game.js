@@ -12,13 +12,7 @@ function loadAssets() {
 
     game.load.image("paddle", "img/paddle.png");
 
-    game.load.image("brick_blue", "img/brick_blue.png");
-    game.load.image("brick_green", "img/brick_green.png");
-    game.load.image("brick_orange", "img/brick_orange.png");
-    game.load.image("brick_purple", "img/brick_purple.png");
-    game.load.image("brick_red", "img/brick_red.png");
-    game.load.image("brick_yellow", "img/brick_yellow.png");
-    game.load.image("brick_pink", "img/brick_pink.png");
+    game.load.spritesheet("bricktable", "img/BB6.png", 32, 16);
 
     game.load.spritesheet("ball", "img/wobble.png", 20, 20);
 
@@ -39,4 +33,4 @@ function startGame() {
 
 function randValues(min, max) {
     return Math.round(Math.random() * (max - min + 1) + min);
-}
+} 

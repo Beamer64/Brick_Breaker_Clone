@@ -1,0 +1,63 @@
+Hello, and thank you for downloading this product!  I am John Marine, the creator of this product you have downloaded.  Allow me to introduce you to what you have just downloaded.
+
+This is a set of blocks to use for block breaking games.  This is a set inspired by the likes of Breakout and Arkanoid.  There are a total of 25 different colored blocks with 12 different block designs.  The blocks started out originally at 16 pixels wide and 8 pixels high.  However, this version has the resolution doubled to 32 pixels wide and 16 pixels high while still maintaining the basic four-color palette of the original blocks.  This set was created inspired by Arkanoid, as each block is the same size as the classic Arkanoid is.  This is all pure pixel art- no vector graphics, no pre-rendered graphics, no downscaled graphics.  Everything was done using the free program Paint.NET.  I was tempted to use Photoshop for easier editing, but I chose to use Paint.NET instead.  I tried to come up with a number of different color combinations.  If you don't like the color combinations I've created, you can make your own by taking the base blocks and giving your own set of colors to them.  You can mix and match the different blocks or stick totally to one set.  So you have flexibility and options at your disposal.
+
+
+Let me show you each block by color.  The arrangement is from left to right, top to bottom:
+
+01: red
+02: orange
+03: yellow
+04: green
+05: blue
+06: purple/violet
+07: pink
+08: teal
+09: aqua blue
+10: crimson
+11: sky blue
+12: lilac
+13: white
+14: cyan
+15: seafoam green
+16: forest green
+17: Game Boy© green
+18: Virtual Boy© Red
+19: brown
+20: bronze
+21: silver
+22: gold
+23: sunset
+24: normal map
+25: onyx
+
+Each of the blocks utilize a four-color scheme and have some black outlining on the bottom and on the right side.  I was not sure if I wanted to use a four-color style or have a three-color style with the darkest color being the dark outline.
+
+
+Here are some rules for the blocks I have set up.  You can, however, have your own rules:
+
+* all of the regular blocks take one hit to destroy.
+
+* The bronze and silver blocks both take two hits to destroy, and the gold blocks take three hits to destroy.
+
+* The "sunset" and "normal map" blocks take one hit to destroy, and these blocks could have any sort of usage ranging from strange effects ranging from item drops to bombs to anything you desire.  Or you may just use them for decoration.
+
+* The black onyx blocks cannot be destroyed.
+
+
+Let me warn you of something.  I created these blocks without testing them by building some prototype to map out how to use them.  I am trusting you know how to build game prototypes for something like a Breakout-style game.  I would love to say I have programming knowledge and could provide you this quality product.  However, I am more an artist than a programmer.  So I will leave it up to you to use my material in a program and properly have fun with it.
+
+
+One last thing... if you use my material, please let me know of any projects you are working on.  It may also be possible these block busting blocks could also be used for other projects, such as with platformer games.  Never be afraid to think outside the box using material like this.
+
+I must provide SOMETHING to OpenGameArt.  In the future, I am working on one more higher-resolution and reworked versions of these blocks to suit higher-resolution games.  So stay tuned for these updated blocks when they become available.
+
+
+These gaming assets is Public Domain for Creative Commons (CC-BY).  You may freely use my work in projects ranging from personal projects to commercial projects.  Just be sure to credit me for providing this to you.
+
+For more information on me and my work, please visit my main site.  Visit my Facebook fan page if you use Facebook.  You are also welcome to visit my main blog.  Links included:
+* http://johnmarinedesigns.weebly.com
+* http://www.facebook.com/TheJohnMarine
+* http://johnbmarine.blogspot.com
+
+Thank you and enjoy, mate!  :)

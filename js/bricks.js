@@ -12,7 +12,7 @@ function initBricks() {
             col: randValues(1, 7)
         },
         offset: {
-            top: 50,
+            top: 120,
             left: 60
         },
         padding: 10
@@ -21,29 +21,22 @@ function initBricks() {
     bricks = game.add.group();
     for (c = 0; c < brickInfo.count.col; c++) {
         for (r = 0; r < brickInfo.count.row; r++) {
-            var brickX =
-                r * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
-            var brickY =
-                c * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
-            newBrick = game.add.sprite(brickX, brickY, randBrickColor());
-            game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-            newBrick.body.immovable = true;
-            newBrick.anchor.set(0.5);
-            bricks.add(newBrick);
+            randBrickLayout();
         }
     }
 }
 
-function randBrickColor() {
-    var brickColors = [
-        "brick_blue",
-        "brick_green",
-        "brick_orange",
-        "brick_purple",
-        "brick_red",
-        "brick_yellow",
-        "brick_pink"
-    ];
-    var newColor = brickColors[Math.floor(Math.random() * brickColors.length)];
-    return newColor;
+function randBrickLayout() {
+    var brickX =
+        r * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+    var brickY =
+        c * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
+    newBrick = game.add.sprite(brickX, brickY, "bricktable");
+    newBrick.width = brickInfo.width;
+    newBrick.height = brickInfo.height;
+    newBrick.frame = randValues(1, 25);
+    game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+    newBrick.body.immovable = true;
+    newBrick.anchor.set(0.5);
+    bricks.add(newBrick);
 }
