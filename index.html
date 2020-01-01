@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Brick Breaker Clone</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script src="js/phaser.js"></script>
+    <script src="js/ball.js"></script>
+    <script src="js/bricks.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/paddle.js"></script>
+    <script src="js/labels.js"></script>
+</head>
+<body>
+    <script>
+        var game = new Phaser.Game(600, 400, Phaser.CANVAS, null, {
+            preload: preload,
+            create: create,
+            update: update
+        });
+
+        var score = 0; var lives = 3; var playing = false;
+
+        //preloads sprite assets and sprite sheets
+        //sets canvas properties
+        function preload() {
+            loadAssets();
+        }
+
+        //creates and renders the game assets
+        function create() {
+            gamePhysics(); //used to change physics and boundries
+
+            createBall(); //renders ball object with properties
+
+            createPaddle(); //renders paddle object with properties
+
+            initBricks(); //renders brick objects with properties
+
+            labelStyle(); //standard text style across game
+
+            createScoreLabel(); //renders and updates score
+
+            createLivesLabel(); //renders and updates lives
+
+            createLivesLostLabel(); //shows text if a life is lost
+
+            createStartButton(); // renders start button to begin the game
+        }
+
+        function update() {
+            collisionHandle(); //used for collision events
+
+            paddleControls(); //game controls
+        }
+    </script>
+</body>
+</html>
