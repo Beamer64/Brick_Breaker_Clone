@@ -33,10 +33,18 @@ function resetBall() {
     if (lives <= 3) {
         game.input.onDown.addOnce(function () {
             lifeLostText.visible = false;
-            ball.body.velocity.set(randValues(1, game.world.width), randValues(-1, -game.world.height));
+            ball.animations.play("wobble");
+            setBallVelocity();
         }, this);
     }
     else {
-        ball.body.velocity.set(randValues(1, game.world.width), randValues(-1, -game.world.height));
+        ball.animations.play("wobble");
+        setBallVelocity();
     }
+}
+
+function setBallVelocity() {
+    var ballV = ball.body.velocity.set(randValues(-(game.world.width / 2), game.world.width), randValues(-150, -game.world.height));
+    console.log(ballV);
+    return ballV;
 }

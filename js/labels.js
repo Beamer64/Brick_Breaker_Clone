@@ -18,7 +18,7 @@ function createLivesLabel() {
 }
 
 function createLivesLostLabel() {
-    lifeLostText = game.add.text(game.world.width * 0.5, game.world.height * 0.5, "Life lost, tap to continue", textStyle);
+    lifeLostText = game.add.text(game.world.width * 0.5, game.world.height * 0.5, "Life lost, click to continue", textStyle);
     lifeLostText.anchor.set(0.5);
     lifeLostText.visible = false;
 }
@@ -26,4 +26,13 @@ function createLivesLostLabel() {
 function createStartButton() {
     startButton = game.add.button(game.world.width * 0.5, game.world.height * 0.5, "button", startGame, this, 1, 0, 2);
     startButton.anchor.set(0.5);
+}
+
+function createVelocityLabel() {
+    velocty = game.add.text(game.world.width / 2, 5, "Velocity: ", textStyle);
+    velocty.anchor.set(0.5, 0);
+}
+
+function setVelocityLabel() {
+    velocty.setText("Velocity x: " + ball.body.velocity.x + " y: " + ball.body.velocity.y);
 }

@@ -32,7 +32,8 @@ function gamePhysics() {
 
 function startGame() {
     startButton.destroy();
-    ball.body.velocity.set(randValues(1, game.world.width), randValues(-1, -game.world.height));
+    ball.animations.play("wobble");
+    setBallVelocity();
     playing = true;
 }
 

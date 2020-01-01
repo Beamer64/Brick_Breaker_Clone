@@ -9,17 +9,17 @@
             margin: 0;
         }
     </style>
-    <script src="js/phaser.js"></script>
     <script src="js/ball.js"></script>
     <script src="js/bricks.js"></script>
     <script src="js/game.js"></script>
     <script src="js/paddle.js"></script>
     <script src="js/labels.js"></script>
     <script src="js/collisions.js"></script>
+    <script src="js/phaser.js"></script>
 </head>
 <body>
     <script>
-        var game = new Phaser.Game(600, 400, Phaser.CANVAS, null, {
+        var game = new Phaser.Game(900, 700, Phaser.CANVAS, null, {
             preload: preload,
             create: create,
             update: update
@@ -51,13 +51,17 @@
 
             createLivesLostLabel(); //shows text if a life is lost
 
-            createStartButton(); // renders start button to begin the game
+            createStartButton(); //renders start button to begin the game
+
+            createVelocityLabel(); //creates a temp velocity label for debugging
         }
 
         function update() {
             collisionManager(); //used for collision events
 
             paddleControls(); //game controls
+
+            setVelocityLabel(); //updates the velocity label with the balls new velocity
         }
     </script>
 </body>

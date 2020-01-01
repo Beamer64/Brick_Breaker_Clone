@@ -15,6 +15,7 @@ function paddleControls() {
     resetKey = game.input.keyboard.addKey(Phaser.Keyboard.ONE);
     resetKey.onDown.add(resetBall, this);
 
+    //sets controls to match the mouse cursor
     if (playing) {
         paddle.x = game.input.x || game.world.width * 0.5;
     }
