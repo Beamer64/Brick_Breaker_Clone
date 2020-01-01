@@ -28,23 +28,18 @@ function ballLeaveScreen() {
 }
 
 function resetBall() {
-    ball.reset(game.world.width * 0.5, game.world.height - 25);
-    paddle.reset(game.world.width * 0.5, game.world.height - 5);
+    ball.reset(paddle.x, paddle.y - 20);
     if (lives <= 3) {
         game.input.onDown.addOnce(function () {
+            reset = false;
             lifeLostText.visible = false;
             ball.animations.play("wobble");
             setBallVelocity();
         }, this);
     }
-    else {
-        ball.animations.play("wobble");
-        setBallVelocity();
-    }
 }
 
 function setBallVelocity() {
-    var ballV = ball.body.velocity.set(randValues(-(game.world.width / 2), game.world.width), randValues(-150, -game.world.height));
-    console.log(ballV);
-    return ballV;
+    return ball.body.velocity.set(randValues(-(game.world.width / 2),
+        game.world.width), randValues(-150, -game.world.height));
 }
