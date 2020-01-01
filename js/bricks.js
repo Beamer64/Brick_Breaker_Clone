@@ -1,4 +1,9 @@
-﻿function initBricks() {
+﻿/**
+ * This JavaScript file handles the bricks for the game. Properties such as
+ * size, color, position etc can be easily adjusted here. Level difficulty
+ * will also be handled in this file.*/
+
+function initBricks() {
     brickInfo = {
         width: 50,
         height: 20,
