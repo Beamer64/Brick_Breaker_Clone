@@ -100,6 +100,7 @@
     <Content Include="index.html" />
     <Content Include="js\ball.js" />
     <Content Include="js\bricks.js" />
+    <Content Include="js\collisions.js" />
     <Content Include="js\game.js" />
     <Content Include="js\labels.js" />
     <Content Include="js\paddle.js" />

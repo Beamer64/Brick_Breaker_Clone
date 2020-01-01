@@ -1,8 +1,8 @@
 ﻿/**
  * This javaScript file holds the various aspects and mechanics related to the ball.
  * Resetting the ball, ball collisions and ball properties can
- * be edited from this file. Collisions will probably be moved to a
- * collision oriented file in the future.*/
+ * be edited from this file.
+ * */
 
 function createBall() {
     ball = game.add.sprite(game.world.width * 0.5, game.world.height - 25, "ball");
@@ -15,22 +15,6 @@ function createBall() {
     ball.events.onOutOfBounds.add(ballLeaveScreen, this);
 }
 
-function ballHitBrick(ball, brick) {
-    ball.animations.play("wobble");
-    var killTween = game.add.tween(brick.scale);
-    killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
-    killTween.onComplete.addOnce(function () {
-        brick.kill();
-    }, this);
-    killTween.start();
-    score += 10;
-    scoreText.setText("Points: " + score);
-    if (score === brickInfo.count.row * brickInfo.count.col * 10) {
-        alert("You won the game, congratulations!");
-        location.reload();
-    }
-}
-
 function ballLeaveScreen() {
     lives--;
     if (lives) {
@@ -41,11 +25,6 @@ function ballLeaveScreen() {
         alert("You lost, game over!");
         location.reload();
     }
-}
-
-function ballHitPaddle(ball, paddle) {
-    ball.animations.play("wobble");
-    ball.body.velocity.x = -1 * 5 * (paddle.x - ball.x);
 }
 
 function resetBall() {
