@@ -10,7 +10,7 @@ function loadAssets() {
     game.scale.pageAlignVertically = true;
     game.stage.backgroundColor = "#eee";
 
-    game.load.image("paddle", "img/paddle.png");
+    game.load.image("black_paddle", "img/black_paddle.png");
 
     game.load.spritesheet("bricktable", "img/BB6.png", 32, 16);
 

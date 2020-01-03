@@ -8,8 +8,8 @@ function initBricks() {
         width: 50,
         height: 20,
         count: {
-            row: randValues(1, 13),
-            col: randValues(1, 7)
+            row: 14,
+            col: 2
         },
         offset: {
             top: 120,
