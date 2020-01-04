@@ -4,8 +4,16 @@
  * easily adjusted from here.
  * */
 
+function createLabels() {
+    labelStyle();
+    createScoreLabel(); 
+    createLivesLabel(); 
+    createLivesLostLabel(); 
+    createVelocityLabel();
+}
+
 function labelStyle() {
-    textStyle = { font: "18px Arial", fill: "#0095DD" };
+    textStyle = { font: "18px Arial", fill: "#BD0900" };
 }
 
 function createScoreLabel() {

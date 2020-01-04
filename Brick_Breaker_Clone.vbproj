@@ -92,11 +92,12 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\ball.png" />
-    <Content Include="img\brick.png" />
-    <Content Include="img\button.png" />
-    <Content Include="img\paddle.png" />
-    <Content Include="img\wobble.png" />
+    <Content Include="res\img\ball.png" />
+    <Content Include="res\img\BB6.png" />
+    <Content Include="res\img\black_paddle.png" />
+    <Content Include="res\img\button.png" />
+    <Content Include="res\img\paddle.png" />
+    <Content Include="res\img\wobble.png" />
     <Content Include="index.html" />
     <Content Include="js\ball.js" />
     <Content Include="js\bricks.js" />
@@ -105,6 +106,9 @@
     <Content Include="js\labels.js" />
     <Content Include="js\paddle.js" />
     <Content Include="js\phaser.js" />
+    <Content Include="res\sounds\BGmusic.mp3" />
+    <Content Include="res\sounds\padBounce.wav" />
+    <Content Include="res\sounds\void.wav" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

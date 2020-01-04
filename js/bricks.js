@@ -8,14 +8,14 @@ function initBricks() {
         width: 50,
         height: 20,
         count: {
-            row: 14,
-            col: 2
+            row: 16,
+            col: 4
         },
         offset: {
             top: 120,
-            left: 60
+            left: 80
         },
-        padding: 10
+        padding: 20
     };
 
     bricks = game.add.group();

@@ -10,6 +10,7 @@ function collisionManager() {
 
 function ballHitBrick(ball, brick) {
     ball.animations.play("wobble");
+    voided.play();
     var killTween = game.add.tween(brick.scale);
     killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
     killTween.onComplete.addOnce(function () {
@@ -26,5 +27,6 @@ function ballHitBrick(ball, brick) {
 
 function ballHitPaddle(ball, paddle) {
     ball.animations.play("wobble");
+    bounce.play();
     ball.body.velocity.x = -1 * 5 * (paddle.x - ball.x);
 }

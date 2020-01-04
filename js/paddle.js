@@ -17,5 +17,15 @@ function paddleControls() {
     //sets controls to match the mouse cursor
     if (playing) {
         paddle.x = game.input.x || game.world.width * 0.5;
+        if (paddle.x + (paddle.body.width / 2) > game.world.width) {
+            paddle.x = game.world.width - (paddle.body.width / 2);
+        }
+        else if (paddle.x - (paddle.body.width / 2) < 0) {
+            paddle.x = paddle.body.width / 2;
+        }
+
+        if (ballOnPaddle) {
+            ball.x = paddle.x;
+        }
     }
 }

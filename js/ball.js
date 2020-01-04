@@ -5,7 +5,7 @@
  * */
 
 function createBall() {
-    ball = game.add.sprite(game.world.width * 0.5, game.world.height - 25, "ball");
+    ball = game.add.sprite(paddle.x, paddle.y - 27, "ball");
     ball.animations.add("wobble", [0, 1, 0, 2, 0, 1, 0, 2, 0], 24);
     ball.anchor.set(0.5);
     game.physics.enable(ball, Phaser.Physics.ARCADE);
@@ -28,17 +28,20 @@ function ballLeaveScreen() {
 }
 
 function resetBall() {
-    ball.reset(paddle.x, paddle.y - 20);
-        game.input.onDown.addOnce(function () {
-            lifeLostText.visible = false;
-            ball.animations.play("wobble");
-            setBallVelocity();
-        }, this);
-    }
+    ballOnPaddle = true;
+    ball.reset(paddle.x, paddle.y - 27);
+    game.input.onDown.addOnce(function () {
+        ballOnPaddle = false;
+        lifeLostText.visible = false;
+        ball.animations.play("wobble");
+        setBallVelocity();
+    }, this);
+}
 
 //sets ball velocity with x and y to random values
 //between world parameters but will always shoot up
 function setBallVelocity() {
-    return ball.body.velocity.set(randValues(-(game.world.width / 2),
-        game.world.width), randValues(-150, -game.world.height));
+    return ball.body.velocity.set(randValues(-game.world.width,
+        game.world.width), randValues(-300, -game.world.height));
 }
+
