@@ -13,7 +13,7 @@ function createLabels() {
 }
 
 function labelStyle() {
-    textStyle = { font: "18px Arial", fill: "#BD0900" };
+    textStyle = { font: "18px Arial", fill: "#DAA520" };
 }
 
 function createScoreLabel() {

@@ -92,9 +92,9 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="res\img\background.png" />
     <Content Include="res\img\ball.png" />
     <Content Include="res\img\BB6.png" />
-    <Content Include="res\img\black_paddle.png" />
     <Content Include="res\img\button.png" />
     <Content Include="res\img\paddle.png" />
     <Content Include="res\img\wobble.png" />

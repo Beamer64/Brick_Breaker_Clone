@@ -10,7 +10,11 @@ function loadAssets() {
     game.scale.pageAlignVertically = true;
     game.stage.backgroundColor = "#515151";
 
-    game.load.image("black_paddle", "res/img/paddle.png");
+    game.load.image("background", "res/img/background.png");
+
+    game.load.image("paddleSmall", "res/img/paddleSmall.png");
+    game.load.image("paddleMedium", "res/img/paddleMedium.png");
+    game.load.image("paddleLarge", "res/img/paddleLarge.png");
 
     game.load.spritesheet("bricktable", "res/img/BB1.png", 32, 16);
     game.load.spritesheet("ball", "res/img/wobble.png", 20, 20);
@@ -19,6 +23,10 @@ function loadAssets() {
     game.load.audio("voided", "res/sounds/void.wav");
     game.load.audio("bounce", "res/sounds/padBounce.wav");
     game.load.audio("bgmusic", "res/sounds/BGmusic.mp3");
+}
+
+function createBackground() {
+    game.add.image(0, 0, "background");
 }
 
 function gamePhysics() {
@@ -41,10 +49,10 @@ function loadAudio() {
     bgmusic.play();
 
     voided = game.add.audio("voided");
-    voided.volume = 0.4;
+    voided.volume = 0.3;
 
     bounce = game.add.audio("bounce");
-    bounce.volume = 0.4;
+    bounce.volume = 0.3;
 }
 
 function randValues(min, max) {

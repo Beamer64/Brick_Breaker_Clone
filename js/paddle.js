@@ -5,7 +5,7 @@
  * */
 
 function createPaddle() {
-    paddle = game.add.sprite(game.world.width * 0.5, game.world.height - 5, "black_paddle");
+    paddle = game.add.sprite(game.world.width * 0.5, game.world.height - 5, paddleSize());
     paddle.anchor.set(0.5, 1);
     game.physics.enable(paddle, Phaser.Physics.ARCADE);
     paddle.body.immovable = true;
@@ -27,5 +27,20 @@ function paddleControls() {
         if (ballOnPaddle) {
             ball.x = paddle.x;
         }
+    }
+}
+
+//increase paddle size to larger sprite on life loss
+function paddleSize() {
+    switch (lives) {
+        case 3:
+            return "paddleSmall";
+            break;
+        case 2:
+            return "paddleMedium";
+            break;
+        case 1:
+            return "paddleLarge";
+            break;
     }
 }

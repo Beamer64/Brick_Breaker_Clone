@@ -17,6 +17,8 @@ function createBall() {
 
 function ballLeaveScreen() {
     lives--;
+    paddle.destroy();
+    createPaddle();
     if (lives) {
         livesText.setText("Lives: " + lives);
         lifeLostText.visible = true;
@@ -41,7 +43,6 @@ function resetBall() {
 //sets ball velocity with x and y to random values
 //between world parameters but will always shoot up
 function setBallVelocity() {
-    return ball.body.velocity.set(randValues(-game.world.width,
-        game.world.width), randValues(-300, -game.world.height));
+    return ball.body.velocity.set(randValues(-600,
+        600), randValues(-300, -game.world.height));
 }
-
