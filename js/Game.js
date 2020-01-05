@@ -49,12 +49,13 @@ function loadAudio() {
     bgmusic.play();
 
     voided = game.add.audio("voided");
-    voided.volume = 0.3;
+    voided.volume = 0.2;
 
     bounce = game.add.audio("bounce");
-    bounce.volume = 0.3;
+    bounce.volume = 0.2;
 }
 
+//picks a random number between the min and max value
 function randValues(min, max) {
     return Math.round(Math.random() * (max - min + 1) + min);
 }

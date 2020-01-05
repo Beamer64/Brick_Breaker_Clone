@@ -44,3 +44,13 @@ function createVelocityLabel() {
 function setVelocityLabel() {
     velocty.setText("Velocity x: " + ball.body.velocity.x + " y: " + ball.body.velocity.y);
 }
+
+//updates score
+function setScore() {
+    score += 10;
+    scoreText.setText("Points: " + score);
+    if (score === brickInfo.count.row * brickInfo.count.col * 10) {
+        alert("You won, cool.");
+        location.reload();
+    }
+}

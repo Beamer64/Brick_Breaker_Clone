@@ -12,20 +12,27 @@ function createPaddle() {
 }
 
 function paddleControls() {
+    //press 1 on keyboard resets the ball to the paddle
     resetKey = game.input.keyboard.addKey(Phaser.Keyboard.ONE);
     resetKey.onDown.add(resetBall, this);
+
     //sets controls to match the mouse cursor
     if (playing) {
         paddle.x = game.input.x || game.world.width * 0.5;
         if (paddle.x + (paddle.body.width / 2) > game.world.width) {
             paddle.x = game.world.width - (paddle.body.width / 2);
         }
+        //keep paddle on screen
         else if (paddle.x - (paddle.body.width / 2) < 0) {
             paddle.x = paddle.body.width / 2;
         }
 
         if (ballOnPaddle) {
+            ballRotation = false;
             ball.x = paddle.x;
+        }
+        if (ballRotation) {
+            ball.body.rotation += randValues(-20, 20);
         }
     }
 }

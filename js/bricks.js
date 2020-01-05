@@ -25,7 +25,7 @@ function initBricks() {
         }
     }
 }
-
+//arranges bricks in a 17X4 grid, chossing random sprites
 function randBrickLayout() {
     var brickX =
         r * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
@@ -39,4 +39,14 @@ function randBrickLayout() {
     newBrick.body.immovable = true;
     newBrick.anchor.set(0.5);
     bricks.add(newBrick);
+}
+
+//removes brick after hit
+function destroyBrick(brick) {
+    var killTween = game.add.tween(brick.scale);
+    killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
+    killTween.onComplete.addOnce(function () {
+        brick.kill();
+    }, this);
+    killTween.start();
 }

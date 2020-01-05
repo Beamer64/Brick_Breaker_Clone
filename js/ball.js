@@ -18,7 +18,7 @@ function createBall() {
 function ballLeaveScreen() {
     lives--;
     paddle.destroy();
-    createPaddle();
+    createPaddle(); //updates to a larger paddle after life loss
     if (lives) {
         livesText.setText("Lives: " + lives);
         lifeLostText.visible = true;
@@ -34,6 +34,7 @@ function resetBall() {
     ball.reset(paddle.x, paddle.y - 27);
     game.input.onDown.addOnce(function () {
         ballOnPaddle = false;
+        ballRotation = true;
         lifeLostText.visible = false;
         ball.animations.play("wobble");
         setBallVelocity();

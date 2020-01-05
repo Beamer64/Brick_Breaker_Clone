@@ -11,18 +11,8 @@ function collisionManager() {
 function ballHitBrick(ball, brick) {
     ball.animations.play("wobble");
     voided.play();
-    var killTween = game.add.tween(brick.scale);
-    killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
-    killTween.onComplete.addOnce(function () {
-        brick.kill();
-    }, this);
-    killTween.start();
-    score += 10;
-    scoreText.setText("Points: " + score);
-    if (score === brickInfo.count.row * brickInfo.count.col * 10) {
-        alert("You won, cool.");
-        location.reload();
-    }
+    destroyBrick(brick);
+    setScore();
 }
 
 function ballHitPaddle(ball, paddle) {
