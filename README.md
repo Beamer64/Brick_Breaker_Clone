@@ -23,3 +23,8 @@ To play the game, all you need to do is download or fork the repo and open the *
 page while it is in the same directory as the res and js folders.
 
 I hope it brings a little nostalgia back!
+
+![Screenshot](ScreenShots/ScreenShot1.png)
+![Screenshot](ScreenShots/ScreenShot2.png)
+![Screenshot](ScreenShots/ScreenShot3.png)
+![Screenshot](ScreenShots/ScreenShot4.png)
